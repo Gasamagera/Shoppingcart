@@ -1,0 +1,300 @@
+/* src/styles/App.css */
+
+body {
+  padding: 0;
+  margin: 0;
+}
+.App {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(0, 0, 0, 0.2)
+  );
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+  color: #333; /* Text color */
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding-top: 80px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Push items to opposite ends */
+  align-items: center; /* Center items vertically */
+  width: 60%; /* Full width of the viewport */
+  height: 80px; /* Adjust the height as needed */
+  padding: 0 20px; /* Add some horizontal padding */
+
+  border-bottom: 1px solid #ddd; /* Optional bottom border */
+  box-sizing: border-box; /* Include padding in width calculations */
+  position: fixed; /* Make it fixed at the top */
+  top: 0; /* Position it at the top of the viewport */
+  left: 2; /* Align it to the left of the viewport */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.navbar h2 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5rem; /* Adjust font size as needed */
+  color: #333; /* Optional text color */
+}
+
+.navbar img {
+  height: 50px; /* Adjust the image size */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.circle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Diameter of the circle */
+  height: 40px; /* Diameter of the circle */
+  border-radius: 50%; /* Makes it circular */
+  border: none; /* Remove default border */
+  background-color: #fff; /* Button background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  cursor: pointer; /* Show pointer cursor on hover */
+  padding: 0; /* Remove extra padding */
+}
+
+.circle-button img {
+  width: 80%; /* Scale the image to fit inside the circle */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 50%; /* Make the image itself circular */
+}
+.product-container {
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping of items when the space is full */
+  justify-content: flex-start; /* Align the items to the left */
+  gap: 20px; /* Space between the product cards */
+  padding: 20px; /* Add some padding around the container */
+  width: 100%; /* Ensure the container takes the full available width */
+}
+
+ul {
+  display: ruby;
+  padding: 0;
+  margin: 2px 0px 0px 15px;
+}
+.product-card {
+  display: flex;
+  flex-direction: column; /* Arrange the content vertically inside the card */
+  align-items: center; /* Center the content inside each card */
+  justify-content: flex-start; /* Align items to the top */
+  background: #fff; /* White background for the card */
+  border: 1px solid #ddd; /* Light border around the card */
+  border-radius: 10px; /* Rounded corners for the card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  padding: 10px; /* Padding inside the card */
+  width: 250px; /* Set a fixed width for each card */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  position: relative;
+  height: 350px; /* Fixed height for the card */
+  margin: 10px;
+}
+
+.product-image {
+  width: 100%; /* Make the image fill the width of the card */
+  height: 200px; /* Set a fixed height for the image */
+  object-fit: cover; /* Ensures the image covers the space without distortion */
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Space between elements */
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  height: 100%; /* Take up remaining space */
+}
+
+.product-name {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.product-price {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+  font-weight: bold;
+}
+
+.price-and-button {
+  display: flex;
+  align-items: center; /* Align vertically */
+  justify-content: space-between; /* Space between price and button */
+  width: 100%; /* Ensure it takes the full width */
+  padding-top: 10px;
+}
+
+.add-to-cart-button {
+  padding: 5px 10px; /* Smaller button padding */
+  font-size: 0.8rem; /* Smaller font size for the button */
+  background-color: #4682b4; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-left: 10px; /* Add space between the price and button */
+}
+
+.add-to-cart-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+.hidden {
+  display: none; /* Completely hide the container and remove it from layout */
+}
+
+.container {
+  display: flex;
+  gap: 20px; /* Space between the divs */
+}
+
+.product-container {
+  flex: 4; /* Takes 4 parts of the total space */
+}
+
+.packing-list-container {
+  flex: 1; /* Takes 1 part of the total space */
+  background-color: #f8f9fa; /* Optional: Background color */
+  color: black; /* Ensures text is readable */
+  padding: 10px;
+  position: relative;
+  padding-bottom: 50px; /* Space for buttons at the bottom */
+}
+
+.product-container {
+  background-color: #f8f9fa; /* Optional styling */
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove extra padding */
+  margin: 0; /* Remove extra margin */
+}
+li {
+  display: flex; /* Arrange elements in a row */
+  align-items: center; /* Align items vertically */
+  /* Space between elements inside the card */
+  padding: 20px; /* Add padding inside the card */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for card effect */
+  background-color: white; /* Light blue background for the card */
+  color: black; /* Make text white */
+  width: 100%; /* Occupy full width of the container */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  border-bottom: none; /* Remove border between items except the last one */
+  margin-bottom: 4px; /* Small space between list items */
+  font-size: 12px; /* Smaller text */
+}
+
+.item-name {
+  flex: 2; /* Allocate space for the item name */
+  text-align: left; /* Align text to the left */
+}
+
+.item-price,
+.item-quantity {
+  flex: 1; /* Allocate equal space for price and quantity */
+  text-align: center; /* Center align text */
+}
+
+.item-btn {
+  flex: 0; /* Buttons take minimal space */
+  padding: 0; /* Remove extra padding */
+  width: 20px; /* Adjust the button size */
+  height: 20px; /* Ensure it's smaller */
+  border-radius: 50%; /* Make the button circular */
+  border: 1px solid #ddd; /* Optional: Add border for visibility */
+  background-color: white; /* Button background color */
+  color: #333; /* Button text color */
+  display: flex; /* Center content inside the button */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  cursor: pointer; /* Pointer cursor for buttons */
+}
+
+.item-btn:hover {
+  background-color: #f0f0f0; /* Optional: Darker color on hover */
+}
+
+.action-buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.close-btn {
+  padding: 10px 20px; /* Button padding */
+  background-color: #191970; /* Blue background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.checkout-btn {
+  padding: 10px 20px; /* Button padding */
+  background-color: #4682b4; /* Blue background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.circle-notification {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -10px; /* Adjust the position to be close to the button */
+  font-size: 12px; /* Adjust the number font size */
+  font-weight: bold;
+}
+
+.circle-notification span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the number inside the circle */
+}
+
+.item-image {
+  width: 40px; /* Adjust size of the image */
+  height: 40px; /* Ensure the image is square */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image doesn't stretch */
+  margin-right: 10px; /* Space between the image and the item name */
+}
+.hidden {
+  display: none; /* Completely hide the container and remove it from the layout */
+}
